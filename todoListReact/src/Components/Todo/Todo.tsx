@@ -22,7 +22,8 @@ const Todo = () => {
 
   //create a function to help us add our todo  to our list
   const addTodo = (newItem: string) => {
-    const newTodo = {
+    
+    const newTodo:TodoItem | any = {
       id: Math.random(),
       todo: newItem,
       completeItem: false
