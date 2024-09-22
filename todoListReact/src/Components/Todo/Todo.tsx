@@ -32,6 +32,7 @@ const Todo = () => {
     setInput("");
   };
 
+  //function
   const handleDelete = (id: number) => {
     setList(list.filter((lists) => lists.id !== id));
   }
@@ -43,10 +44,6 @@ const Todo = () => {
  
     return (
       <>
-
-
-
-
         <div className="myContainer">
           <div className="row">
             <h1>Todo List</h1>
@@ -63,6 +60,7 @@ const Todo = () => {
           <ul>
             {list.map((item) => (
               <div key={item.id}>
+                {/* MdCheckCircle is react-icons: go to the react-icons site and look for install | npm install react-icons --save */}
                 {item.completeItem? <MdCheckCircle onClick={() => doneTask(item.id)}/> : <MdRadioButtonUnchecked onClick={() => doneTask(item.id)}  /> }    
                 {item.todo}
              
